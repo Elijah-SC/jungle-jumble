@@ -15,8 +15,27 @@ export class Jumble {
 
   get JumbleHTMLTemplate() {
     return `<div class="d-flex justify-content-evenly align-items-center m-3">
-            <button>Start</button>
+            <button onclick="app.JumblesController.setActiveJumble('${this.id}')" >Start</button>
             <p class="">${this.name}</p> <span><i class="mdi mdi-timer"></i> 34 seconds</span> <span>55 wpm</span>
           </div>`
+  }
+
+  get activeJumbleHTMLTemplate() {
+    return `
+    <div class="mb-3 border border-dark p-3">
+          <div class="d-flex justify-content-between">
+            <p>${this.name}</p>
+            <time>Fastest time 10 secs</time>
+          </div>
+          <p>${this.body}</p>
+        </div>
+
+        <div class="border border-dark p-3 text-center">
+          <textarea class="w-100" name="" id=""></textarea>
+          <button class="btn btn-outline-danger">Submit</button>
+        </div>
+
+      </div>
+    `
   }
 }
