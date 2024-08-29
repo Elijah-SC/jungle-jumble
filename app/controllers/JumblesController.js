@@ -9,6 +9,7 @@ export class JumblesController {
     AppState.on('jumbles', this.drawJumbles)
     AppState.on(`activeJumble`, this.drawActiveJumble)
     this.drawJumbles()
+    jumblesService.loadJumbles()
   }
 
   drawActiveJumble() {

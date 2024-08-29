@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js"
 import { Jumble } from "../models/Jumbles.js"
+import { loadState, saveState } from "../utils/Store.js"
 
 class JumblesService {
 
@@ -17,9 +18,17 @@ class JumblesService {
     const jumblesData = AppState.jumbles
     const newJumblesData = new Jumble(jumblesFormData)
     jumblesData.push(newJumblesData)
-
+    this.saveJumbles()
   }
 
+
+  saveJumbles() {
+    saveState(`jumbles`, AppState.jumbles)
+  }
+  loadJumbles() {
+    const jumblesFromLocalStorage = loadState(`jumbles`, [Jumble])
+    AppState.jumbles = jumblesFromLocalStorage
+  }
 }
 
 export const jumblesService = new JumblesService()
