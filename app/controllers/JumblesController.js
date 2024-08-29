@@ -12,6 +12,8 @@ export class JumblesController {
   }
 
   drawActiveJumble() {
+    const activeJumble = AppState.activeJumble
+    setHTML(`activeJumble`, activeJumble.activeJumbleHTMLTemplate)
 
   }
 
