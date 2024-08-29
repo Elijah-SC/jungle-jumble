@@ -47,29 +47,33 @@
 
       </div>
 
-      <div class="col-lg-4 border border-dark text-center mx-3">
-        <h1>Jumbles</h1>
+      <div class="col-lg-4 text-center">
+        <div class="mx-3 border border-dark">
 
-        <div id="jumblesList">
 
-          <!-- <div class="d-flex justify-content-evenly align-items-center m-3">
-            <button>Start</button>
-            <p class="">Easy Jumble</p> <span><i class="mdi mdi-timer"></i> 34 seconds</span> <span>55 wpm</span>
-          </div> -->
+          <h1>Jumbles</h1>
 
+          <div id="jumblesList">
+
+            <!-- <div class="d-flex justify-content-evenly align-items-center m-3">
+      <button>Start</button>
+      <p class="">Easy Jumble</p> <span><i class="mdi mdi-timer"></i> 34 seconds</span> <span>55 wpm</span>
+    </div> -->
+
+          </div>
+
+          <form onsubmit="app.JumblesController.createJumbles()">
+            <div class="form-floating mb-3">
+              <input name="name" type="text" class="w-100 p form-control" required maxlength="30">
+              <label for="name" placeholder="name">Name</label>
+            </div>
+            <div class="form-floating">
+              <input name="body" type="text" class="w-100 pb-5 form-control" required minlength="10" maxlength="5000">
+              <label for="body" placeholder="body">Jumble</label>
+            </div>
+            <button type="submit" class="btn btn-outline-danger mt-2">Submit</button>
+          </form>
         </div>
-
-        <form onsubmit="app.JumblesController.createJumbles()">
-          <div class="form-floating mb-3">
-            <input name="name" type="text" class="w-100 p form-control" required maxlength="30">
-            <label for="name" placeholder="name">Name</label>
-          </div>
-          <div class="form-floating">
-            <input name="body" type="text" class="w-100 pb-5 form-control" required minlength="10" maxlength="5000">
-            <label for="body" placeholder="body">Jumble</label>
-          </div>
-          <button type="submit" class="btn btn-outline-danger mt-2">Submit</button>
-        </form>
       </div>
 
     </section>
