@@ -16,7 +16,7 @@ export class Jumble {
   get JumbleHTMLTemplate() {
     return `<div class="d-flex justify-content-evenly align-items-center m-3">
             <button>Start</button>
-            <p class="">Easy Jumble</p> <span><i class="mdi mdi-timer"></i> 34 seconds</span> <span>55 wpm</span>
+            <p class="">${this.name}</p> <span><i class="mdi mdi-timer"></i> 34 seconds</span> <span>55 wpm</span>
           </div>`
   }
 }

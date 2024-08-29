@@ -61,14 +61,14 @@
 
         </div>
 
-        <form>
+        <form onsubmit="app.JumblesController.createJumbles()">
           <div class="form-floating mb-3">
-            <input type="text" class="w-100 p form-control">
-            <label for="floatingInputValue" placeholder="name">Name</label>
+            <input name="name" type="text" class="w-100 p form-control" required maxlength="30">
+            <label for="name" placeholder="name">Name</label>
           </div>
           <div class="form-floating">
-            <input type="text" class="w-100 pb-5 form-control">
-            <label for="floatingInputValue" placeholder="Jumble">Jumble</label>
+            <input name="body" type="text" class="w-100 pb-5 form-control" required minlength="10" maxlength="5000">
+            <label for="body" placeholder="body">Jumble</label>
           </div>
           <button type="submit" class="btn btn-outline-danger mt-2">Submit</button>
         </form>
